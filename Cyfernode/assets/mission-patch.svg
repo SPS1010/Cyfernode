@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+<defs><path id="top" d="M80 300 A220 220 0 0 1 520 300"/><path id="bot" d="M70 300 A230 230 0 0 0 530 300"/>
+<clipPath id="pc"><circle cx="300" cy="300" r="196"/></clipPath></defs>
+<circle cx="300" cy="300" r="290" fill="#FF5A1F"/><circle cx="300" cy="300" r="276" fill="#0B0F1A"/>
+<circle cx="300" cy="300" r="200" fill="none" stroke="#F2F4F8" stroke-width="4"/>
+<g clip-path="url(#pc)"><circle cx="300" cy="300" r="196" fill="#11162A"/>
+<g fill="#F2F4F8"><circle cx="200" cy="170" r="3"/><circle cx="420" cy="200" r="2.5"/><circle cx="440" cy="400" r="3"/><circle cx="170" cy="380" r="2"/><circle cx="330" cy="140" r="2"/></g>
+<g fill="#3FB950"><rect x="160" y="440" width="22" height="22" rx="4"/><rect x="190" y="440" width="22" height="22" rx="4" opacity=".6"/><rect x="220" y="440" width="22" height="22" rx="4"/><rect x="250" y="440" width="22" height="22" rx="4" opacity=".35"/><rect x="280" y="440" width="22" height="22" rx="4"/><rect x="310" y="440" width="22" height="22" rx="4" opacity=".7"/><rect x="340" y="440" width="22" height="22" rx="4"/><rect x="370" y="440" width="22" height="22" rx="4" opacity=".5"/><rect x="400" y="440" width="22" height="22" rx="4"/></g></g>
+<g transform="translate(168 150) scale(1.1)"><defs><mask id="p-k" maskUnits="userSpaceOnUse" x="0" y="0" width="240" height="240">
+<rect width="240" height="240" fill="#fff"/>
+<rect x="72" y="86" width="100" height="54" rx="27" fill="#000"/>
+<g transform="translate(120 152) rotate(-12)"><path d="M104 0 A104 34 0 0 1 -104 0" fill="none" stroke="#000" stroke-width="26"/></g>
+</mask></defs>
+<g transform="translate(120 152) rotate(-12)"><path d="M-104 0 A104 34 0 0 1 104 0" fill="none" stroke="#FF5A1F" stroke-width="10" stroke-linecap="round"/></g>
+<g mask="url(#p-k)" fill="#F2F4F8"><circle cx="120" cy="130" r="68"/><path d="M62 100 L70 46 L110 64 Z M178 100 L170 46 L130 64 Z"/></g>
+<path d="M88 124 Q90 104 110 101" fill="none" stroke="#F2F4F8" stroke-width="7" stroke-linecap="round"/><path d="M87 133 L87.5 132.5" fill="none" stroke="#F2F4F8" stroke-width="7" stroke-linecap="round"/>
+<g transform="translate(120 152) rotate(-12)"><path d="M104 0 A104 34 0 0 1 -104 0" fill="none" stroke="#FF5A1F" stroke-width="10" stroke-linecap="round"/>
+<circle cx="97.7" cy="-11.6" r="11" fill="#3FB950"/></g></g>
+<text font-family="Futura, sans-serif" font-weight="700" font-size="30" letter-spacing="5" fill="#F2F4F8" text-anchor="middle"><textPath href="#top" startOffset="50%">GITHUB · MISSION CONTROL</textPath></text>
+<text font-family="Menlo, monospace" font-size="22" letter-spacing="4" fill="#FF5A1F" text-anchor="middle" dominant-baseline="hanging"><textPath href="#bot" startOffset="50%">EVERY LAUNCH STARTS WITH A COMMIT</textPath></text>
+</svg>

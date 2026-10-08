@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lost &amp; Found Mission</title>
+<meta name="description" content="Mission 0042: Lost &amp; Found for Summer Fields, a GitHub Mission Control mission page.">
+<link rel="icon" href="assets/app-icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="mission.css">
+
+</head>
+<body>
+
+<nav class="nav appbar" aria-label="Primary">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="GitHub Mission Control home"><img src="assets/lockup-transparent-light.svg" alt="GitHub Mission Control"></a>
+    <div class="search"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M8 1.5l1.4 3.6 3.6 1.4-3.6 1.4L8 11.5 6.6 7.9 3 6.5l3.6-1.4z"/><path d="M13 11l.6 1.4 1.4.6-1.4.6L13 15l-.6-1.4L11 13l1.4-.6z"/></svg>Ask Ground Control or search missions<kbd>⌘K</kbd></div>
+    <div class="right">
+      <a class="iconbtn" href="#" aria-label="Notifications"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8a5 5 0 0 1 10 0c0 5 2 6 2 6H3s2-1 2-6M8.5 17a1.8 1.8 0 0 0 3 0"/></svg></a>
+      <span class="avatar av-a" title="Aanya">A</span>
+    </div>
+  </div>
+</nav>
+
+<header class="mhead">
+  <div class="wrap page">
+    <div class="crumbs tele"><a href="#">Aanya</a><span>/</span><a href="#">Missions</a><span>/</span><b>lost-and-found</b></div>
+    <div class="telemetry tele">
+      <span>Mission <b>0042</b></span>
+      <span>Status: <b class="go"><span class="dot"></span>&nbsp;GO</b></span>
+      <span>T-minus <b id="tminus">01D 22:14:08</b> to launch</span>
+    </div>
+    <div class="titlerow">
+      <div class="l">
+        <img class="patch" src="assets/mission-patch.svg" alt="">
+        <div>
+          <h1>Lost &amp; Found for Summer Fields</h1>
+          <p>A place where Summer Fields students post found items with a photo, and claim what's theirs with a teacher's OK.</p>
+        </div>
+      </div>
+      <div class="acts">
+        <a class="btn btn-ghost" href="#">Invite crew</a>
+        <button class="btn btn-ign btn-launch" id="launchBtn" type="button">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11.5 3.5c2.5-1 4.5-1 5-1-.1.6-.1 2.6-1.1 5.1L10 13l-3-3z"/><path d="M7 10L4.5 9.5l2-2.5 3 .1M10 13l.5 2.5 2.5-2-.1-3M5.5 14.5l-2 2"/></svg>
+          Launch mission</button>
+      </div>
+    </div>
+    <div class="metarow">
+      <div class="crew">
+        <div class="stack"><span class="avatar av-a">A</span><span class="avatar av-k">K</span><span class="avatar av-m">M</span><span class="avatar av-g">GC</span></div>
+        <span class="who"><b>Crew</b> · Aanya, Kabir, Meera + Ground Control</span>
+      </div>
+      <span class="sep"></span>
+      <span class="chip go"><span class="dot" style="width:6px;height:6px"></span> First Mission</span>
+      <span class="chip"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.2l2 4.3 4.6.5-3.4 3.2.9 4.6L8 11.5l-4.1 2.3.9-4.6L1.4 6l4.6-.5z"/></svg> Star · 24</span>
+      <span class="chip">Cadets · School safe</span>
+    </div>
+    <nav class="tabs" aria-label="Mission">
+      <a class="on" href="#"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="2"/></svg>Overview</a>
+      <a href="#log"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 4h10M3 8h10M3 12h6"/></svg>Flight Log</a>
+      <a href="#dock"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="4" cy="4" r="1.8"/><circle cx="12" cy="12" r="1.8"/><path d="M4 6v3a3 3 0 0 0 3 3h3"/></svg>Docking <span class="count">1</span></a>
+      <a href="#"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2.5c2-.8 3.8-.8 4.5-.8 0 .7 0 2.5-.8 4.5L8 11 5 8z"/><path d="M4.5 12.5l-2 1.5"/></svg>Launch</a>
+      <a href="#map"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.2l2 4.3 4.6.5-3.4 3.2.9 4.6L8 11.5l-4.1 2.3.9-4.6L1.4 6l4.6-.5z"/></svg>Star Map</a>
+      <a href="#"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="2.2"/><path d="M8 1.5v2M8 12.5v2M1.5 8h2M12.5 8h2M3.4 3.4l1.4 1.4M11.2 11.2l1.4 1.4M3.4 12.6l1.4-1.4M11.2 4.8l1.4-1.4"/></svg>Settings</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap page">
+  <div class="card progress" aria-label="Mission trajectory">
+    <div class="stage done"><span class="node"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg></span><div><b>Plan</b><small>Complete</small></div></div>
+    <div class="stage done"><span class="node"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg></span><div><b>Build</b><small>Complete</small></div></div>
+    <div class="stage now"><span class="node">03</span><div><b>Dock</b><small class="c-neb">In progress</small></div></div>
+    <div class="stage next"><span class="node">04</span><div><b>Launch</b><small class="c-ign">T-minus 1 day</small></div></div>
+  </div>
+
+  <div class="grid">
+    <div class="col">
+      <!-- docking request -->
+      <article class="card dock" id="dock">
+        <div class="dock-top">
+          <span class="dock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M6 8.5v3a5 5 0 0 0 5 5h4.5"/><path d="M13 14l2.5 2.5L13 19"/></svg></span>
+          <div>
+            <span class="tele">Docking request · #7</span>
+            <h3><span class="who">Kabir wants to dock:</span> Add photo upload</h3>
+            <p>Into <span style="font-family:var(--mono);font-size:13px;color:var(--starlight)">main orbit</span> from <span style="font-family:var(--mono);font-size:13px;color:var(--starlight)">kabir/photo-upload</span></p>
+          </div>
+          <span class="docked"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg>Docked</span>
+        </div>
+        <div class="gc-sum">
+          <span class="avatar av-g">GC</span>
+          <div><span class="tele c-neb">Ground Control summary</span>
+          <p>Adds a camera button to the "Post an item" form. Photos are resized and stored safely, and nobody's name is shown on them. No clashes with Aanya's work, so it docked cleanly.</p></div>
+        </div>
+        <div class="checks">
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg>All checks passed</span>
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg>Works on phones</span>
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg>School-safe</span>
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg>Reviewed by Aanya</span>
+        </div>
+        <div class="dock-foot">
+          <span class="orbitline"><span class="avatar av-k">K</span><i></i><span class="avatar av-a">A</span></span>
+          Docked into main orbit 2 hours ago
+          <span class="r"><span class="add">+148</span> &nbsp;<span class="del">−12</span> &nbsp;· 3 files</span>
+        </div>
+      </article>
+
+      <!-- files -->
+      <section class="card files" aria-label="Mission files">
+        <div class="card-h">
+          <span class="branch"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="8" cy="8" rx="6.5" ry="2.6" transform="rotate(-14 8 8)"/><circle cx="8" cy="8" r="2" fill="currentColor" stroke="none"/></svg>main orbit</span>
+          <div class="latest"><span class="avatar av-k" style="width:22px;height:22px;font-size:9px">K</span><span><b>Kabir</b> docked photo upload</span></div>
+          <div class="r"><span class="tele" style="font-size:10px">7 files · 2h ago</span></div>
+        </div>
+        <div>
+          <div class="frow"><svg class="ico-d" viewBox="0 0 20 20" fill="currentColor"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h4l2 2h7A1.5 1.5 0 0 1 18 7.5v7a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 2 14.5z" opacity=".85"/></svg><span class="name">app/</span><span class="why"><em>GC</em>The screens students see, starting with the home page</span><span class="when">2h</span></div>
+          <div class="frow"><svg class="ico-d" viewBox="0 0 20 20" fill="currentColor"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h4l2 2h7A1.5 1.5 0 0 1 18 7.5v7a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 2 14.5z" opacity=".85"/></svg><span class="name">components/</span><span class="why"><em>GC</em>Reusable pieces, like the found-item card</span><span class="when">2h</span></div>
+          <div class="frow"><svg class="ico-d" viewBox="0 0 20 20" fill="currentColor"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h4l2 2h7A1.5 1.5 0 0 1 18 7.5v7a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 2 14.5z" opacity=".85"/></svg><span class="name">api/</span><span class="why"><em>GC</em>Where posts, photos and claims are saved</span><span class="when">2h</span></div>
+          <div class="frow"><svg class="ico-d" viewBox="0 0 20 20" fill="currentColor"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h4l2 2h7A1.5 1.5 0 0 1 18 7.5v7a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 2 14.5z" opacity=".85"/></svg><span class="name">public/</span><span class="why"><em>GC</em>Images and the Summer Fields crest</span><span class="when">1d</span></div>
+          <div class="frow"><svg class="ico-f" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2.5h6.5L15 6v11.5H5z"/><path d="M11.5 2.5V6H15"/></svg><span class="name">README.md</span><span class="why"><em>GC</em>The mission briefing, in plain English</span><span class="when">1d</span></div>
+          <div class="frow"><svg class="ico-f" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2.5h6.5L15 6v11.5H5z"/><path d="M11.5 2.5V6H15"/></svg><span class="name">launch.json</span><span class="why"><em>GC</em>Launch settings: where the mission goes live</span><span class="when">3d</span></div>
+          <div class="frow"><svg class="ico-f" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2.5h6.5L15 6v11.5H5z"/><path d="M11.5 2.5V6H15"/></svg><span class="name">package.json</span><span class="why"><em>GC</em>The list of tools this mission uses</span><span class="when">5d</span></div>
+        </div>
+      </section>
+
+      <!-- flight log -->
+      <section class="card" id="log" aria-label="Flight Log">
+        <div class="card-h"><h2>Flight Log</h2><span class="tele">Auto-summarised</span><div class="r"><a class="btn btn-ghost btn-sm" href="#">View all</a></div></div>
+        <div class="log">
+          <div class="entry"><span class="avatar av-k">K</span><div><p><b>Kabir</b> added photo upload to the post form <span class="tag dock">Docked</span></p><small>Students can now snap a picture of what they found.</small></div><span class="t">2H AGO</span></div>
+          <div class="entry"><span class="avatar av-g">GC</span><div><p><b>Ground Control</b> fixed a typo on the claim button <span class="tag gc">Assist</span></p><small>"Calim" is now "Claim". Aanya approved the fix.</small></div><span class="t">5H AGO</span></div>
+          <div class="entry"><span class="avatar av-m">M</span><div><p><b>Meera</b> styled the home screen in school colours</p><small>Navy and gold, bigger photos, easier to read on phones.</small></div><span class="t">1D AGO</span></div>
+          <div class="entry"><span class="avatar av-a">A</span><div><p><b>Aanya</b> built the found-items list</p><small>Newest items first, with where and when they were found.</small></div><span class="t">2D AGO</span></div>
+          <div class="entry"><span class="avatar av-a">A</span><div><p><b>Aanya</b> started the mission with Ground Control <span class="tag start">Mission start</span></p><small>"A lost &amp; found app for my school." The first commit.</small></div><span class="t">5D AGO</span></div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="col">
+      <!-- ground control -->
+      <section class="card gcp" aria-label="Ground Control">
+        <div class="card-h"><span class="avatar av-g">GC</span><div><strong>Ground Control</strong><span class="tele c-neb">Mission plan</span></div><div class="r"><span class="tele"><span class="dot c-go"></span>&nbsp; Online</span></div></div>
+        <div class="pbar"><div class="row"><span class="tele">Progress</span><span class="tele"><b>3 of 5</b> done</span></div><div class="track"><i></i></div></div>
+        <ul class="checklist">
+          <li class="ok"><span class="bx"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Set up the mission</li>
+          <li class="ok"><span class="bx"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Home screen with found items</li>
+          <li class="ok"><span class="bx"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Post an item with a photo</li>
+          <li class="now"><span class="bx"></span><div>Claim button with teacher approval<small>In progress · Tester agent</small></div></li>
+          <li class="launch"><span class="bx"></span>Launch to a live link for the school</li>
+        </ul>
+        <div class="tip">Next: the claim button. Want me to draft it? I'll explain each part as I go.
+          <div class="opts"><span class="on">Draft it with me</span><span>Explain first</span></div>
+        </div>
+        <div class="ask">Ask Ground Control anything<span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13V3M4 7l4-4 4 4"/></svg></span></div>
+      </section>
+
+      <!-- mini star map -->
+      <section class="card mini" id="map" aria-label="Mission Star Map">
+        <div class="top"><strong>Star Map</strong><span class="tele">Last 20 weeks</span></div>
+        <svg id="mini" role="img" aria-label="Mission Star Map showing days the crew built"></svg>
+        <div class="legend"><span><i style="background:#FF7A45"></i>Aanya</span><span><i style="background:#A08BFF"></i>Kabir</span><span><i style="background:#4FD068"></i>Meera</span></div>
+      </section>
+
+      <!-- about -->
+      <section class="card about" aria-label="About this mission">
+        <h3>Launch pad</h3>
+        <div class="url"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8" cy="8" r="6"/><path d="M2 8h12M8 2c2 2 2 10 0 12M8 2c-2 2-2 10 0 12"/></svg><span>aanya.github.io/lost-and-found</span><em>PENDING</em></div>
+        <div class="tags"><span>school</span><span>lost-and-found</span><span>first-mission</span><span>cadets</span></div>
+      </section>
+    </aside>
+  </div>
+</main>
+
+<footer class="footer" style="padding:40px 0 32px">
+  <div class="wrap page">
+    <div class="bottom" style="margin-top:0;border-top:0;padding-top:0">
+      <span class="tele">GitHub · Mission Control</span>
+      <span>Student concept for a rebranding competition. Not an official GitHub page. Personas are fictional.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- launch modal -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="lpTitle">
+  <div class="lp" id="lp">
+    <button class="x" id="closeBtn" type="button" aria-label="Close"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+    <span class="tele c-ign">Mission 0042 · Launch sequence</span>
+    <div class="ring">
+      <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="92" fill="none" stroke="rgba(242,244,248,.08)" stroke-width="4"/><circle id="arc" cx="100" cy="100" r="92" fill="none" stroke="#FF5A1F" stroke-width="4" stroke-linecap="round" stroke-dasharray="578" stroke-dashoffset="578" style="transition:stroke-dashoffset 1s linear"/></svg>
+      <div class="num"><b id="count">5</b><span>T-MINUS</span></div>
+      <img src="assets/mark-transparent-light.svg" alt="">
+    </div>
+    <h2 id="lpTitle">Ready for launch</h2>
+    <p class="sub" id="lpSub">Ground Control is running final checks.</p>
+    <ul class="go-list" id="goList">
+      <li><span>Build</span><i></i><b>GO</b></li>
+      <li><span>Checks</span><i></i><b>GO</b></li>
+      <li><span>Crew review</span><i></i><b>GO</b></li>
+      <li><span>Launch pad</span><i></i><b>GO</b></li>
+    </ul>
+    <div class="live-url"><span class="dot c-go"></span>aanya.github.io/lost-and-found</div>
+    <div class="acts">
+      <button class="btn btn-ghost only-count" id="abortBtn" type="button">Hold launch</button>
+      <a class="btn btn-ign only-live" href="#">Open live mission</a>
+      <button class="btn btn-ghost only-live" type="button">Share with my school</button>
+    </div>
+  </div>
+</div>
+
+<script src="mission.js"></script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GitHub Mission Control</title>
+<meta name="description" content="GitHub is now Mission Control for every builder. Launch what you imagine.">
+<link rel="icon" href="assets/app-icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="GitHub Mission Control home"><img src="assets/lockup-transparent-light.svg" alt="GitHub Mission Control"></a>
+    <ul>
+      <li><a href="mission.html">Missions</a></li>
+      <li><a href="#ground-control">Ground Control</a></li>
+      <li><a href="#star-map">Star Map</a></li>
+      <li><a href="#cadets">Cadets</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+    </ul>
+    <div class="right">
+      <a class="signin" href="#">Sign in</a>
+      <a class="btn btn-ign btn-sm" href="mission.html"><span class="long">Start your first mission</span><span class="short" aria-hidden="true">Start</span></a>
+      <button class="menu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="status-pill"><span class="dot"></span><span class="tele">Mission Control · <b>All systems go</b></span></div>
+      <h1 class="display">Launch<br>what you<br><span class="grad">imagine.</span></h1>
+      <p class="lede">GitHub is now Mission Control for every builder. Tell Ground Control what you want to make, build it with your crew, and launch it to the world. No jargon required.</p>
+      <div class="ctas">
+        <a class="btn btn-ign" href="mission.html">Start your first mission
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="btn btn-ghost" href="#ground-control">Meet Ground Control</a>
+      </div>
+      <div class="proof">
+        <div class="stack"><span class="avatar av-a">A</span><span class="avatar av-k">K</span><span class="avatar av-m">M</span></div>
+        <span class="tele">Students, creators <b>&amp; pros</b></span>
+      </div>
+    </div>
+
+    <div class="console">
+      <div class="halo"></div>
+      <img class="watermark" src="assets/mark-transparent-light.svg" alt="">
+      <div class="prompt">
+        <div class="tele"><span class="dot c-neb"></span> Ground Control <span style="color:var(--dust-2)">·</span> New mission</div>
+        <div class="q">What do you want to build?</div>
+        <div class="typed" id="typed" data-text="A lost &amp; found app for my school, where students post found items with a photo and claim what's theirs.">A lost &amp; found app for my school, where students post found items with a photo and claim what's theirs.<span class="caret"></span></div>
+        <div class="row">
+          <span class="chip">First Mission template</span>
+          <span class="chip">For my school</span>
+          <span class="send" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13V3M4 7l4-4 4 4"/></svg></span>
+        </div>
+      </div>
+      <div class="answer" id="answer">
+        <div class="head">
+          <span class="avatar av-g">GC</span>
+          <div><strong>Mission plan ready</strong><span class="tele c-neb">Ground Control · 4 steps</span></div>
+        </div>
+        <p>Great idea. Here's the trajectory. I'll explain every step as we go.</p>
+        <ul class="plan">
+          <li><span class="n">01</span> Home screen with found items <span class="t">Build</span></li>
+          <li><span class="n">02</span> Post an item with a photo <span class="t">Build</span></li>
+          <li><span class="n">03</span> Claim button with teacher approval <span class="t">Dock</span></li>
+          <li><span class="n">04</span> Launch to a live link for the school <span class="t c-ign">Launch</span></li>
+        </ul>
+        <div class="acts">
+          <a class="btn btn-ign btn-sm" href="mission.html">Start this mission</a>
+          <a class="btn btn-ghost btn-sm" href="#">Change the plan</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HOW A MISSION WORKS ================= -->
+<section class="block" id="missions">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="tele eyebrow c-ign">How a mission works</span>
+      <h2>From idea to liftoff,<br class="d"> in four steps.</h2>
+      <p class="lede">Every project on GitHub is now a Mission: a goal, a crew and a launch date. Here's the flight path.</p>
+    </div>
+    <div class="traj rv">
+      <svg class="path" viewBox="0 0 1200 250" aria-hidden="true">
+        <defs>
+          <linearGradient id="tg" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" stop-color="#A08BFF"/><stop offset=".55" stop-color="#F2F4F8"/><stop offset="1" stop-color="#FF5A1F"/>
+          </linearGradient>
+          <radialGradient id="glowN"><stop offset="0" stop-color="#7C5CFF" stop-opacity=".55"/><stop offset="1" stop-color="#7C5CFF" stop-opacity="0"/></radialGradient>
+          <radialGradient id="glowI"><stop offset="0" stop-color="#FF5A1F" stop-opacity=".6"/><stop offset="1" stop-color="#FF5A1F" stop-opacity="0"/></radialGradient>
+          <radialGradient id="glowG"><stop offset="0" stop-color="#3FB950" stop-opacity=".45"/><stop offset="1" stop-color="#3FB950" stop-opacity="0"/></radialGradient>
+        </defs>
+        <path id="flight" class="dash" d="M30 225 C80 208 110 178 150 170 C250 150 350 90 450 90 C560 90 640 150 750 150 C860 150 950 70 1050 60 C1110 54 1160 30 1190 14" fill="none" stroke="url(#tg)" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="150" cy="170" r="46" fill="url(#glowN)"/>
+        <circle cx="150" cy="170" r="11" fill="#0B0F1A" stroke="#A08BFF" stroke-width="3"/>
+        <circle cx="450" cy="90" r="11" fill="#0B0F1A" stroke="#F2F4F8" stroke-width="3"/>
+        <circle cx="750" cy="150" r="46" fill="url(#glowG)"/>
+        <circle cx="750" cy="150" r="11" fill="#0B0F1A" stroke="#3FB950" stroke-width="3"/>
+        <circle cx="1050" cy="60" r="60" fill="url(#glowI)"/>
+        <circle cx="1050" cy="60" r="13" fill="#FF5A1F"/>
+        <circle cx="1050" cy="60" r="21" fill="none" stroke="#FF5A1F" stroke-opacity=".4" stroke-width="1.5"/>
+        <g font-family="Menlo, monospace" font-size="11" letter-spacing="2.2" fill="#5E6680">
+          <text x="150" y="215" text-anchor="middle">T-03</text>
+          <text x="450" y="135" text-anchor="middle">T-02</text>
+          <text x="750" y="195" text-anchor="middle">T-01</text>
+          <text x="1050" y="108" text-anchor="middle" fill="#FF7A45">LIFTOFF</text>
+        </g>
+        <circle id="sat" r="4.5" fill="#3FB950" opacity="0"/>
+      </svg>
+      <div class="steps">
+        <span class="steps-mobile-line" aria-hidden="true"></span>
+        <div class="step plan"><span class="tele c-neb">01 · Plan</span><h3>Plan with Ground Control</h3><p>Describe your idea in plain words. Ground Control turns it into a mission plan you can actually follow.</p></div>
+        <div class="step"><span class="tele">02 · Build</span><h3>Build with your crew</h3><p>Write code with AI at your side. Every change is saved to the Flight Log, so nothing is ever lost.</p></div>
+        <div class="step dock"><span class="tele c-go">03 · Dock</span><h3>Dock safely</h3><p>Crew work arrives as a docking request. Ground Control checks it, explains it, and it docks. Safely.</p></div>
+        <div class="step launch"><span class="tele c-ign">04 · Launch</span><h3>Launch to the world</h3><p>One button, one countdown. Your mission gets a live link you can share with anyone.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GROUND CONTROL ================= -->
+<section class="block gc" id="ground-control">
+  <div class="wrap gc-grid">
+    <div class="rv">
+      <span class="tele eyebrow c-neb">Ground Control · Your AI crew</span>
+      <h2>An AI crew that explains everything.</h2>
+      <p class="lede">Ground Control plans the mission, writes code with you and directs AI agents on your behalf. And when something looks scary, it tells you what's happening in plain English.</p>
+      <ul class="feat">
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6l1 1 2-2M4 12l1 1 2-2"/><circle cx="5" cy="18" r="1"/></svg></span><div><strong>Plans the mission</strong><span>Turns "I want to make..." into clear steps, in order.</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span><div><strong>Builds with you</strong><span>Writes code alongside you and shows you why it works.</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="4.5" cy="6" r="2"/><circle cx="19.5" cy="6" r="2"/><circle cx="12" cy="20.5" r="2"/><path d="M6.2 7.2l3.4 2.9M17.8 7.2l-3.4 2.9M12 15v3.5"/></svg></span><div><strong>Directs AI agents</strong><span>Hand off tasks to agents, watch them work, approve what docks.</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span><div><strong>Speaks plain English</strong><span>Every error, every term, translated. It explains, never gatekeeps.</span></div></li>
+      </ul>
+    </div>
+
+    <div class="card gc-ui rv" role="img" aria-label="Ground Control conversation explaining a merge conflict, with AI agents working on the mission">
+      <div class="gc-bar"><span class="avatar av-g">GC</span><strong>Ground Control</strong><span class="tele"><span class="dot c-go"></span>&nbsp; Online<span class="hide-s"> · Mission 0042</span></span></div>
+      <div class="gc-body">
+        <div class="msg me"><span class="avatar av-k">K</span><div class="bubble">It says "merge conflict". Did I break something?</div></div>
+        <div class="msg gc"><span class="avatar av-g">GC</span><div class="bubble">Not at all. You and Aanya both changed the same line in the claim form. Here are both versions. Pick one, or keep both.
+          <div class="diff">
+            <div class="a"><span class="who">Aanya</span><code>"Claim this item"</code></div>
+            <div class="b"><span class="who">Kabir</span><code>"This is mine, claim it"</code></div>
+          </div>
+          <div class="opts"><span>Keep Aanya's</span><span class="on">Keep Kabir's</span><span>Keep both</span></div>
+        </div></div>
+      </div>
+      <div class="agents">
+        <span class="tele">Agents on this mission</span>
+        <div class="agent"><span class="glyph">BU</span><div><b>Builder</b><small>Added photo upload to the post form</small></div><span class="st c-go">Docked ✓</span></div>
+        <div class="agent"><span class="glyph">TE</span><div><b>Tester</b><small>Checking the claim form on phones</small><div class="bar"><i></i></div></div><span class="st c-neb">Working</span></div>
+        <div class="agent"><span class="glyph">WR</span><div><b>Writer</b><small>Drafting the guide for teachers</small></div><span class="st" style="color:var(--dust)">Queued</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STAR MAP ================= -->
+<section class="block" id="star-map">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="tele eyebrow c-go">Star Map</span>
+      <h2>Every day you build,<br class="d"> a new star lights up.</h2>
+      <p class="lede">Your contribution graph is now a Star Map. Keep building and your streaks join up into constellations you can share.</p>
+    </div>
+    <div class="card starmap rv">
+      <div class="sm-top">
+        <div class="who"><span class="avatar av-a">A</span><div><strong>Aanya's Star Map</strong><span class="tele">Cadet · Summer Fields</span></div></div>
+        <button class="btn btn-ghost btn-sm" id="replay" type="button">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8a5.5 5.5 0 1 0 1.6-3.9M2.5 2.5v3h3"/></svg> Replay</button>
+      </div>
+      <svg id="starmap" role="img" aria-label="A grid of daily contributions that turns into a constellation"></svg>
+      <div class="sm-bottom">
+        <span class="tele">Constellation unlocked · <b class="sm-name" style="font-family:var(--display);letter-spacing:0;text-transform:none;font-size:15px">The Launchpad</b></span>
+        <span class="legend tele">Quiet <i style="opacity:.18"></i><i style="opacity:.4"></i><i style="opacity:.65"></i><i></i> Bright</span>
+      </div>
+    </div>
+    <div class="sm-feats rv">
+      <div><strong>Streaks become constellations</strong><span>Build a few days in a row and your stars connect.</span></div>
+      <div><strong>My Orbit, every year</strong><span>A shareable recap of everything you launched.</span></div>
+      <div><strong>Proof of work, not a password</strong><span>A Star Map says more than a CV ever could.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VOCABULARY ================= -->
+<section class="block" id="vocab" style="padding-top:60px">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="tele eyebrow c-ign">The new vocabulary</span>
+      <h2>Old words, new world.</h2>
+      <p class="lede">Git jargon kept people out. The new words say what things actually do.</p>
+    </div>
+    <div class="vocab rv">
+      <div class="vrow vhead"><span>Before</span><span></span><span>Now</span><span>What it means</span></div>
+      <div class="vrow"><span class="old">Repository</span><span class="arrow"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h13M12 6l4 4-4 4"/></svg></span><span class="new">Mission</span><span class="mean">A project with a goal, a crew and a launch date.</span></div>
+      <div class="vrow"><span class="old">GitHub Copilot</span><span class="arrow"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h13M12 6l4 4-4 4"/></svg></span><span class="new neb">Ground Control</span><span class="mean">Your AI crew. Plans, builds, directs agents, explains.</span></div>
+      <div class="vrow"><span class="old">Pull request</span><span class="arrow"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h13M12 6l4 4-4 4"/></svg></span><span class="new">Docking request</span><span class="mean">Crew work docks safely into the mission. Docked ✓</span></div>
+      <div class="vrow"><span class="old">Deploy · Pages · Actions</span><span class="arrow"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h13M12 6l4 4-4 4"/></svg></span><span class="new ign">Launch</span><span class="mean">One button, one countdown, one live link.</span></div>
+      <div class="vrow"><span class="old">Contribution graph</span><span class="arrow"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h13M12 6l4 4-4 4"/></svg></span><span class="new go">Star Map</span><span class="mean">Every day you build lights a star.</span></div>
+      <div class="vrow"><span class="old">Commit history</span><span class="arrow"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h13M12 6l4 4-4 4"/></svg></span><span class="new">Flight Log</span><span class="mean">A human-readable story of the mission, auto-summarised.</span></div>
+      <div class="vrow"><span class="old">Collaborators · Org</span><span class="arrow"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h13M12 6l4 4-4 4"/></svg></span><span class="new">Crew</span><span class="mean">The people (and agents) you build with.</span></div>
+      <div class="vrow"><span class="old">Student Developer Pack</span><span class="arrow"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h13M12 6l4 4-4 4"/></svg></span><span class="new">GitHub Cadets</span><span class="mean">Free programme for builders aged 13 to 19, and schools.</span></div>
+      <div class="vrow"><span class="old kept">Stars</span><span class="arrow"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h13M12 6l4 4-4 4"/></svg></span><span class="new">Stars</span><span class="mean">Kept. They were already on-theme.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CADETS ================= -->
+<section class="block" id="cadets" style="padding-top:40px">
+  <div class="wrap">
+    <div class="card cadets-card rv">
+      <img class="patch" src="assets/mission-patch.svg" alt="GitHub Cadets mission patch">
+      <div>
+        <span class="badge-free tele"><span class="dot c-go"></span> Free · Ages 13 to 19</span>
+        <h2>GitHub Cadets.<br>Your first mission is on us.</h2>
+        <p class="lede" style="margin-top:20px">A free programme for students and the schools, clubs and tinkering labs that teach them. Start with a guided First Mission, launch something real, and earn your first stars.</p>
+        <ul class="cadet-list">
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Ground Control, free for every cadet</li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Guided First Mission templates</li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Classroom Mission Control for teachers</li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Safe, school-friendly settings by default</li>
+        </ul>
+        <div class="ctas" style="display:flex;gap:14px;flex-wrap:wrap">
+          <a class="btn btn-ign" href="mission.html">Join the Cadets</a>
+          <a class="btn btn-ghost" href="#">For schools &amp; labs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="block" id="crew">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="tele eyebrow">Meet the crew</span>
+      <h2>Builders before<br class="d"> they're "developers".</h2>
+    </div>
+    <div class="quotes">
+      <figure class="card quote rv">
+        <span class="mission">First mission · <b>Launched</b></span>
+        <blockquote>I typed what I wanted in normal words. Ground Control turned it into a plan, and by Sunday our school had a lost &amp; found app.</blockquote>
+        <figcaption class="who"><span class="avatar av-a">A</span><div><strong>Aanya, 15</strong><span>Class X student</span></div></figcaption>
+      </figure>
+      <figure class="card quote rv">
+        <span class="mission">Docking requests · <b>Docked ✓</b></span>
+        <blockquote>Merge conflicts used to scare me. Now my work just docks, and if something clashes, Ground Control explains it like a friend would.</blockquote>
+        <figcaption class="who"><span class="avatar av-k">K</span><div><strong>Kabir, 19</strong><span>Engineering fresher</span></div></figcaption>
+      </figure>
+      <figure class="card quote rv">
+        <span class="mission">Star Map · <b>Constellation</b></span>
+        <blockquote>I ship portfolio sites and tiny tools without pretending to be a developer. Launch is one button. My Star Map is basically my CV.</blockquote>
+        <figcaption class="who"><span class="avatar av-m">M</span><div><strong>Meera, 23</strong><span>Designer &amp; creator</span></div></figcaption>
+      </figure>
+    </div>
+    <p class="persona-note">Aanya, Kabir and Meera are fictional personas, created to show who this is for.</p>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="stats" id="pricing">
+  <div class="band">
+    <div class="wrap">
+      <div class="big">100M+</div>
+      <div>
+        <h3>developers already build here.</h3>
+        <p>Now the doors are open to everyone who builds next: students, creators, AI-native makers and the teams directing AI agents. Free to start, with Cadets free for students.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final">
+  <div class="wrap">
+    <img class="mark" src="assets/mark-transparent-light.svg" alt="">
+    <h2 class="rv">Every great launch starts with a commit.</h2>
+    <div class="term rv"><span class="p">$</span> git commit -m <span class="s">"first step"</span><span class="caret" style="background:var(--commit)"></span></div>
+    <div class="ctas rv">
+      <a class="btn btn-ign" href="mission.html">Start your first mission</a>
+      <a class="btn btn-ghost" href="#cadets">I'm a student</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="top">
+      <div><a class="brand" href="index.html"><img src="assets/lockup-transparent-light.svg" alt="GitHub Mission Control"></a><p>Mission Control for every builder. Every great launch starts with a commit.</p></div>
+      <div><h4>Product</h4><ul><li><a href="mission.html">Missions</a></li><li><a href="#ground-control">Ground Control</a></li><li><a href="#">Launch</a></li><li><a href="#star-map">Star Map</a></li></ul></div>
+      <div><h4>Cadets</h4><ul><li><a href="#cadets">Students</a></li><li><a href="#">Schools</a></li><li><a href="#">Teachers</a></li><li><a href="#">Tinkering labs</a></li></ul></div>
+      <div><h4>Crew</h4><ul><li><a href="#">Community</a></li><li><a href="#">Events</a></li><li><a href="#">Flight manual</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Blog</a></li><li><a href="#">Careers</a></li></ul></div>
+    </div>
+    <div class="bottom">
+      <span class="tele">GitHub · Mission Control</span>
+      <span>Student concept for a rebranding competition. Not an official GitHub page.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
